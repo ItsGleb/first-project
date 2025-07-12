@@ -232,7 +232,14 @@ Git отслеживает изменения файлов в репозитор
 
 ```mermaid
 graph LR
-    Корневая_директория["Прямоугольник"] --> untracked["Создание файла"]
-
-
+    A["Коренвая директория"] --"Создание файла"--> B["untracked"]
+    B["untracked"] --"git add"--> C["staged"] 
+    D["staged"] --"Внесение изменений"--> E["modified"]
+    E["modified"] --"git add"--> C["staged"] 
+    C["staged"] --"git commit"--> F["tracked"]
+    F["tracked"] --"Внесение изменений"--> E["modified"]
+    E["modified"] --"git add"--> C["staged"]
+    C["staged"] --"git commit"--> F["tracked"]
+    F["tracked"] --"Внесение изменений"--> E["modified"]
+    E["modified"] --"Удаление файла" --> A["Коренвая директория"]
 ```
