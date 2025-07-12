@@ -17,8 +17,11 @@
 
 3. **Настройка профиля :**
 
-- ```Bash $ git config --global user.name "User Namovich"
--  $ git config --global user.email username@yandex.ru ```
+```bash
+$ git config --global user.name "User Namovich"
+$ git config --global user.email username@yandex.ru```
+
+
 > **📌 Важно**  
 > - Имя пишется латиницей в кавычках  
 > - Email должен совпадать с привязанным к GitHub
